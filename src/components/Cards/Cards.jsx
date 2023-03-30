@@ -1,8 +1,11 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import SearchBar from '../SearchBar/SearchBar';
 
-const Cards = (props) => {
+const Cards = ({characters, onClose, onSearch}) => {
    return <div>
-      {props.characters.map((character) => {
+      <SearchBar onSearch={onSearch}/>
+      
+      {characters.map((character) => {
          return <Card
          id={character.id}
          name={character.name}
@@ -11,7 +14,7 @@ const Cards = (props) => {
          gender = {character.gender}
          origin={character.name}
          image= {character.image}
-         onClose={() => props.id}
+         onClose={onClose}
          />
       })}
       </div>;
