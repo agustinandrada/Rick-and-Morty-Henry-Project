@@ -7,6 +7,7 @@ const Cards = ({characters, onClose, onSearch}) => {
       
       {characters.map((character) => {
          return <Card
+         key={character.id}
          id={character.id}
          name={character.name}
          status = {character.status}
