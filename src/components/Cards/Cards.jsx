@@ -1,7 +1,9 @@
 import Card from '../Card/Card';
 import SearchBar from '../SearchBar/SearchBar';
 
+
 const Cards = ({characters, onClose, onSearch}) => {
+
    return <div>
       <SearchBar onSearch={onSearch}/>
       
@@ -20,5 +22,6 @@ const Cards = ({characters, onClose, onSearch}) => {
       })}
       </div>;
 }
+
 
 export default Cards;

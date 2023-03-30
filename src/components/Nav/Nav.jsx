@@ -1,4 +1,3 @@
-import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 
 const Nav = ({onSearch}) =>{
@@ -12,6 +11,9 @@ const Nav = ({onSearch}) =>{
             </Link>
             <Link to='/'>
                 <button>Login</button>
+            </Link>
+            <Link to='/favorites'>
+                <button>Favorites</button>
             </Link>
         </>
     )
