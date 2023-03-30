@@ -34,9 +34,9 @@ export default function Form(login){
         validate({...userData,[property]:value}, setErrors, errors);
     }
 
-    const submitHandler = (event, userData, login)=>{
-        event.preventDefault() //! Asi no recarga la pag cuando tocamos enter
-        login(userData)
+    function submitHandler(event) {
+        event.preventDefault(); //! Asi no recarga la pag cuando tocamos enter
+        login(userData);
     }
 
     return(

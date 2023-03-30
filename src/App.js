@@ -22,12 +22,13 @@ function App() {
    const EMAIL = 'agustinandrada1@gmail.com'
    const PASSWORD = '1234567a'
 
-   const login = ({email, password}) =>{
-      if(email === EMAIL && password === PASSWORD){
+   function login(userData) {
+      if (userData.email === EMAIL && userData.password === PASSWORD) {
          setAccess(true);
-         navigate('/home')
+         navigate('/home');
       }
-      else alert('Usuario Incorrecto')
+      else
+         alert('Usuario Incorrecto');
    }
 
    useEffect(() => {
